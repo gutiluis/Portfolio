@@ -179,5 +179,5 @@ https://flask.palletsprojects.com/en/2.2.x/errorhandling/?highlight=error%20page
 ##
 clone:
 ```bash
-git clone https://github.com/gutiluis/Techdegree-project-5.git
+git clone https://github.com/gutiluis/Portfolio.git
 ```
