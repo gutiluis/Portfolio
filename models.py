@@ -10,7 +10,7 @@ app = Flask(__name__)
 # flask configutarion variable to tell the app which db should connect
 # dialect+driver://username:password@host:port/database # db dialect
 # /// is a relative file path
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projects.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projects.db' # change and add the api key with supabase and cloudflar
 db = SQLAlchemy(app)
 
 
