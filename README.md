@@ -13,7 +13,6 @@
 
 - ORM
 - Relational Database
-- html, css, jinja2, flask, python
 
 ---
 
@@ -22,18 +21,68 @@
 - Python
 - Flask
 - SQLAlchemy
-- SQLite # change to postgresql
-- Github
+- SQLite
 - Jinja2
 - HTML
 - CSS
 - Node.js
 - PostgreSQL
 - Cloudflare
+- Supabase
 
 ---
 
 ## Skills:
+- Backend Architecture: Developed a modular server using Flask and Python, implementing Jinja2 for dynamic content rendering.
+
+- Data Persistence: Architected a relational database schema using PostgreSQL and managed complex queries via SQLAlchemy ORM.
+
+- Cloud Infrastructure: Optimized site delivery and security using Cloudflare for DNS management and SSL encryption.
+
+### Backend
+- RESTful API Development: Designing the routes and endpoints that allow the frontend to communicate with the backend.
+
+- Server-Side Rendering (SSR): Using Jinja2 to dynamically generate HTML, which is a key skill for SEO-friendly web applications.
+
+- Authentication & Session Management: If your app has a login, you’ve mastered handling user states and secure cookies.
+
+### Database Management:
+- Object-Relational Mapping (ORM): The ability to interact with a database using Python objects rather than raw SQL.
+
+- Schema Design & Data Modeling: Defining relationships (One-to-Many, Many-to-Many) between tables.
+
+- Database Migrations: Handling changes to your data structure over time (likely using tools like Flask-Migrate).
+
+### Frontend & UI/UX:
+
+- Responsive Web Design: Ensuring the app looks good on both mobile and desktop.
+
+- Template Inheritence: Using Jinja2 to create reusable layouts (like a base.html), which demonstrates DRY (Don't Repeat Yourself) coding principles.
+
+- Asset Optimization: Managing how CSS and scripts are loaded to keep the app fast.
+
+### DevOps & Infrastructure
+The inclusion of Cloudflare moves this from a "local script" to a "production-ready app."
+
+- DNS & Domain Management: Configuring records to point your domain to your hosting provider.
+
+- Web Security & Performance: Implementing SSL/TLS encryption, DDoS protection, and caching strategies.
+
+- Deployment Pipelines: The knowledge required to take code from a local environment to a live URL.
+
+---
+
+## Features:
+- RESTful backend built with Flask
+- ORM database management using SQLAlchemy
+- PostgreSQL database hosted on Supabase
+- Dynamic HTML templates using Jinja2
+- Responsive UI built with HTML and CSS
+- CRUD operations for project management
+- Secure environment configuration
+- API integration
+
+---
 
 ## SQLite relational db file
 
@@ -51,7 +100,7 @@
 - send-subbmit the html form. not just leave it in the browser user-agent as a post request
 - used to implement an internal flask route function
 - redirect
-- request:
+- request context
 - proxy
 - access incoming request data after using url_for and GET and POST methods
 - app context(). create_all()
@@ -82,13 +131,11 @@
 - keyframes
 - mediaqueries
 
-## custom error pages in flask
-
 ## HTML:
 - the same name of the form attribute should be used with sqlalchemy when creating the model object instance
 - within the form the required attribute does not affect the nullable=false within the sqlalchemy model
 
-## http:
+## HTTP:
 - 302 found request post, 200, 304
 - cache
 - GET, POST
@@ -154,8 +201,9 @@ COMMIT;
 - SET id = '2'
 - WHERE id = 1;
 
-## How to build a custom error page in Flask:
+## Building custom error pages in flask:
 https://flask.palletsprojects.com/en/2.2.x/errorhandling/?highlight=error%20page#custom-error-pages
+
 
 ---
 

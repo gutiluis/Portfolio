@@ -7,3 +7,6 @@ venv/
 !.dev.vars.example
 .env*
 !.env.example
+
+#
+.DS_Store
