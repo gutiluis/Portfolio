@@ -1,0 +1,1 @@
+# describes how the worker, flask backend, and supabase interact

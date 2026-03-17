@@ -84,4 +84,5 @@ def not_found(error):
 if __name__ == "__main__":
     with app.app_context():  # proxy
         db.create_all()
-    app.run(debug=True, port=9000, host='127.0.0.1')
+    print("[INFO]Tables created...")
+    app.run(debug=True, port=9000)

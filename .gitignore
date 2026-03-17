@@ -1,12 +1,20 @@
 __pycache__/
+*.pyc
 venv/
-
 # wrangler files
 .wrangler
 .dev.vars*
 !.dev.vars.example
 .env*
+.env
 !.env.example
-
 #
 .DS_Store
+#
+node_modules/
+#
+supabase/
+#
+.env.local
+# logs
+*.log

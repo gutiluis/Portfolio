@@ -1,6 +1,7 @@
 # Portfolio with SQLAlchemy, HTML, CSS, Cloudflare, Supabase, PostgreSQL
 
 
+
 ## How it works:
 - python3 -m venv venv
 - source venv/bin/activate
@@ -9,19 +10,11 @@
 
 ---
 
-## Features:
-
-- ORM
-- Relational Database
-
----
-
-## Tech-Stack:
+## Tech Stack:
 
 - Python
 - Flask
 - SQLAlchemy
-- SQLite
 - Jinja2
 - HTML
 - CSS
@@ -29,6 +22,7 @@
 - PostgreSQL
 - Cloudflare
 - Supabase
+- Psycopg
 
 ---
 
@@ -84,8 +78,6 @@ The inclusion of Cloudflare moves this from a "local script" to a "production-re
 
 ---
 
-## SQLite relational db file
-
 ## Flask-SQLAlchemy
 - __tablename__ is assumed with flasksqlalchemy extension within the model
 - flask sqlalchemy manages a session per request. open, add, commit or rollback, and session closed()
@@ -105,7 +97,7 @@ The inclusion of Cloudflare moves this from a "local script" to a "production-re
 - access incoming request data after using url_for and GET and POST methods
 - app context(). create_all()
 
-## Jinja2:
+## Jinja2 with Flask:
 - for loops
 - blocks
 - the child file does not have body, or head html tags
@@ -126,43 +118,20 @@ The inclusion of Cloudflare moves this from a "local script" to a "production-re
 - bootstap.js
 - removed crossorigin and integrity hash
 
-## CSS
+## CSS:
 - At-rules
 - keyframes
 - mediaqueries
 
-## HTML:
+## HTML with Flask:
 - the same name of the form attribute should be used with sqlalchemy when creating the model object instance
 - within the form the required attribute does not affect the nullable=false within the sqlalchemy model
 
-## HTTP:
+## HTTP with Flask:
 - 302 found request post, 200, 304
 - cache
 - GET, POST
 - URI
-
-## how to use sqlite3 CLI:
-- sqlite3 db_file.db
-- .tables
-- select * from table_name;
-- .schema table_name;
-- PRAGMA table_info(projects);
-    
-## update sqlitedb with or without transactions
-- UPDATE project
-- SET id = '2'
-- WHERE id = 1;
-
-## safer to do a transaction directly sqlite3 in db form cli
-BEGIN;
-
-UPDATE projects
-SET github_repo = 'https://github.com/gutiluis/Portfolio'
-WHERE id = 1;
-### check
-SELECT id, github_repo FROM projects WHERE id = 1;
-
-COMMIT;
 
 ## use not null to force the column always have input
 
@@ -178,6 +147,35 @@ COMMIT;
 ## value does not work with jinja from the form in textarea tags
 - In HTML, the initial content of a <textarea> is specified between its opening and closing tags, not as a value attribute.
 
+## PSYCOPG:
+### Psyscopg module is a postgresql db adapter for python
+### several threads can share the same connection
+### dialect provides asynchronous and synchronous implementations and notifications # psycopg3 module
+
+### import dotenv to load_env() and connect the db the sqlclchemy postgresql supabase string
+
+### check supabase db is made before running the flask server
+### check if db exists
+- npx supabase projects list # login to supabase cli
+- npx supabase login
+- npx supabase link
+### supabase does not always expose raw db hosts via public dns # ping did not work for instance
+### do not make the supabase db public use the pooler
+- brew install libpq
+- pip install python-dotenv sqlalchemy psycopg2
+
+
+## API keys:
+### supabase BaaS
+- publishable key # safe to expose
+- secret keys # used in backend componends only. # row level security # never expose
+- anon # jwt long lived
+- service_role # jwt long lived # never expose
+
+## both supabase and flask handle authentication
+## flask needs authentication built by oneself. supabase does not authentication is built-in
+## Flask has full control, custom logic
+
 ## flask error handling not for normal control flow
 ## not to replace validation
 ## not to hide bugs permanently
@@ -188,21 +186,43 @@ COMMIT;
 - property form: ImmutableMultiDict[str, str]
 - The form parameters. By default an ImmutableMultiDict is returned from this function. This can be changed by setting parameter_storage_class to a different type. This might be necessary if the order of the form data is important.
 
-## get_or_404(ident(Any), description=None)
+## get_or_404(ident(Any), description=None) with Flask
 - Like get() but aborts with a 404 Not Found error instead of returning None.
-
-## how to use sqlite3 CLI:
-- sqlite3 db_file.db
-- .tables
-- select * from table_name;
-    
-## update sqlitedb with or with transactions
-- UPDATE project
-- SET id = '2'
-- WHERE id = 1;
 
 ## Building custom error pages in flask:
 https://flask.palletsprojects.com/en/2.2.x/errorhandling/?highlight=error%20page#custom-error-pages
+
+
+
+## supabase is not a framework is a backend-as-a-service(BaaS)
+## in BaaS the backend services are built-in already
+## authentication users, login, OAuth, JWT
+## auto-generated REST and realtime APIs
+## File storage
+## Row Level Security
+## Edge functions
+### Every Supabase project includes a connection pooler
+### every supabase project includes a connection string used in flask
+
+
+## cloudflare wrangler # deploy cloud workers should be first?
+- npx wrangler --version
+- npx wrangler dev # start local dev server # see .env
+- npm create cloudflare@latest -- my-first-worker # create a new worker project with a cloudflare account and node.js
+- npm run deploy # after myfisrtcloudflare app created # outside the worker env
+
+## after running npm create cloudflare@latest -- my-first-worker. C3 will create a my-first-worker folder with a new package.json and wrangler.jsonc, a new .gitignore file too
+## a workers project javascript makes it simpler than typescript. less code. easy debugging. less tooling
+## js has request handling, edge runtime, kv/d1/r2, apis instead of ts toolchains
+## the create-cloudflare worker template can be converted to ts later
+## use ts for production not js
+## use ts with supabase in production
+
+## the worker has its own environment and local server with npx wrangler dev. cd my-mirst-worker && npx wrangler dev to run server
+
+## each worker server instance is separate
+
+## most developers prefer push code to github first and manual wrangler deploys cli than using cloudflare gitub deployment
 
 
 ---
