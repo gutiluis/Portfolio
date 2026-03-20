@@ -1,10 +1,15 @@
-"""Flask application with relational db creation for the portfolio site. The app is importing a model."""
+#!/bin/env python3
+"""Flask application with postgresql,
+including db creation for the portfolio site. 
+The app is importing a model.
+"""
+
 from datetime import datetime
 from flask import render_template, url_for, request, redirect
 from models import db, Project, app
 
 
-@app.route('/')
+@app.route('/') # REST endpoint
 def index():
     """Render home page."""
     projects = Project.query.all()

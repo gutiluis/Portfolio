@@ -18,3 +18,7 @@ supabase/
 .env.local
 # logs
 *.log
+#
+connect_to_postgresql_in_supabase.sh
+#
+test_endpointsREST.js

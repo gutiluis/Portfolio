@@ -22,7 +22,7 @@
 - PostgreSQL
 - Cloudflare
 - Supabase
-- Psycopg
+- Psycopg # driver constructor with postrgresql and python
 
 ---
 
@@ -164,6 +164,35 @@ The inclusion of Cloudflare moves this from a "local script" to a "production-re
 - brew install libpq
 - pip install python-dotenv sqlalchemy psycopg2
 
+### The transaction mode connection string connects to your Postgres instance via a proxy which serves as a connection pooler. This is ideal for serverless or edge functions, which require many transient connections.
+
+### can run raw sql from terminal cli or from supabase into the supabase db
+### fix row level security in postgresql
+### Supabase allows convenient and secure data access from the browser, as long as you enable RLS.
+### Each policy is attached to a table, and the policy is executed every time a table is accessed.
+### What auth.uid() is
+### auth.uid() in RLS policies returns the UUID of the currently authenticated user.
+### If no user is logged in (unauthenticated request), it returns NULL.
+### `auth.uid()` Returns `null` When Unauthenticated
+- USING (auth.uid() = user_id)
+### When a request is made without an authenticated user (e.g., no access token is provided or the session has expired), auth.uid() returns null.
+### explicitly checking for authentication
+### authenticated and unauthenticated roles:
+### anon: not logged in
+### authenticated: logged in
+### Any table that RLS will protect must have the user_id column filled with the actual owner’s UUID, or users won’t be able to access their data at all.
+### if there are no more users there is no need for policies
+
+
+# connection test with supabase
+- python3 -m venv venv
+- source venv/bin/activate
+- pip install -r requirements.txt
+- python3 test_supabase.py
+
+### projects table is in the default public schema (normal) which can be accessed by anyone
+### run in SQL to fix:
+- ALTER TABLE projects ENABLE ROW LEVEL SECURITY;
 
 ## API keys:
 ### supabase BaaS
@@ -203,6 +232,15 @@ https://flask.palletsprojects.com/en/2.2.x/errorhandling/?highlight=error%20page
 ## Edge functions
 ### Every Supabase project includes a connection pooler
 ### every supabase project includes a connection string used in flask
+
+### after connecting the models, tables and supabase you can either run sql commands from supabase gui, or supabase terminal, or psql terminal, or psycopg in python language
+### tables need policies and Row level security
+
+### can use supabase to host the webpage without running flask or cloudflare
+### https://<project-ref>.supabase.co
+### supabase url needs to specify the api endpoint
+### its not automatically a REST endpoint (representational state transfer api)
+### an endpoint is 
 
 
 ## cloudflare wrangler # deploy cloud workers should be first?
