@@ -1,10 +1,10 @@
 #!/bin/env python
 
-'''
+"""
 enable RLS with python psycopg
 script usinng a venv to connect to the postgresql inside supabase
 usind ethe database_url from .env
-'''
+"""
 
 from dotenv import load_dotenv
 import os

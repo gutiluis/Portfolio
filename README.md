@@ -239,8 +239,12 @@ https://flask.palletsprojects.com/en/2.2.x/errorhandling/?highlight=error%20page
 ### can use supabase to host the webpage without running flask or cloudflare
 ### https://<project-ref>.supabase.co
 ### supabase url needs to specify the api endpoint
-### its not automatically a REST endpoint (representational state transfer api)
-### an endpoint is 
+### supabase is automatically a REST endpoint (representational state transfer api):
+### PostgreSQL as the backend – Supabase uses PostgreSQL to store your tables.
+### PostgREST layer – Supabase runs a tool called PostgREST on top of your database. This exposes each table as a RESTful API.
+### Automatic endpoints – For every table in your database, you get endpoints like:
+### to view the tables from supabase it needs to fetch with javascript and tables need reading permission and RL enabled. suppabase has only tables no routes, no html, no css is a RESTful API
+- check_if_reading_enabled_with_RLS.py
 
 
 ## cloudflare wrangler # deploy cloud workers should be first?

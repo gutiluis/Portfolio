@@ -1,0 +1,46 @@
+# pre-commit-config.yml configuration flag options: id, name, args, files, exclude hooks
+# pre-commit ignores external hooks
+
+
+# .pre-commit-config.yaml
+repos:
+  # 1. Code formatting with Black. checks and reformats python code
+  - repo: https://github.com/psf/black
+    rev: 26.3.1   # use the latest stable tag
+    hooks:
+      - id: black
+        language_version: python3
+        types: [python]
+
+  # 2. Linting with Flake8. coding style and warnings about bugs. officialy hosted in gitlab will need a gitlab account
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        language_version: python3
+        additional_dependencies: [flake8-bugbear]
+        types: [python]
+
+  # 3. Detect trailing whitespace, tabs, empty files, validates yaml
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml # for parseable syntax
+      - id: check-added-large-files # prevents giant files from being commited
+
+  # 4. Optional: Safety for known insecure Python
+  # simple safety if everybody uses the same python setup and venv
+  # Pre-commit just runs the command in your current environment (your venv)
+  # the repo field can be a real repository URL or a special sentinel value like local
+  - repo: local # make a .pre-commit-hooks.yaml for safety custom in the venv
+    hooks:
+      - id: safety
+        name: Custom hook safety check
+        entry: python -m safety check -r requirements.txt --full-report # command to run
+        language: system
+        # does not analyze python files
+        # no filenames will be passed to the hook
+        #scans only the dependency file requirements.txt for vulnerabilities
+        pass_filenames: false
