@@ -1,16 +1,19 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "webpage with db in cloud",
+  "description": "webpage with db in cloudflare pages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "macacOS team",
+  "author": "tech-ca-labs",
   "license": "MIT",
   "devDependencies": {
     "supabase": "^2.78.1",
     "wrangler": "^4.73.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.100.0"
   }
 }

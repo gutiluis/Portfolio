@@ -8,3 +8,5 @@ pytest
 ```bash
 safety check
 ```
+### sql directly in postrgresql
+### python with psycopg

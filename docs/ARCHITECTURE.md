@@ -13,79 +13,23 @@ The architecture is designed to:
 
 ---
 
-# System Architecture
+# System Architecture; TODO
 
 ```
-User Browser
-     │
-     │ HTTP Requests
-     ▼
-Frontend (HTML / CSS / JavaScript)
-     │
-     │ API Calls (fetch / axios)
-     ▼
-Backend (Flask Application)
-     │
-     │ SQLAlchemy ORM
-     ▼
-Supabase Transaction Pooler (Supavisor / PgBouncer)
-     │
-     │ PostgreSQL protocol
-     ▼
-Database (Supabase PostgreSQL)
+
 
 
 ```
 
-Optional production deployment:
-
-```
-User
- │
- ▼
-Cloudflare (DNS / CDN)
- │
- ▼
-Frontend Hosting
- │
- ▼
-API Server (Flask)
- │
- ▼
-Supabase PostgreSQL Database
-```
 
 ---
 
-# Project Structure
+# Project Structure; TODO
 
 ```
-Portfolio/
-│
-├── app/
-│   ├── __init__.py
-│   ├── app.py
-│   ├── routes.py
-│   ├── models.py
-│   └── templates/
-│
-├── tests/
-│   ├── conftest.py
-│   └── test_routes.py
-│
-├── docs/
-│   ├── architecture.md
-│   └── testing.md
-│
-├── .github/
-│   └── workflows/
-│
-├── requirements.txt
-├── README.md
-└── setup.sh
 ```
 
-### Key Directories
+### Key Directories; TODO
 
 **app/**
 Contains the main application logic including routes, models, and templates.
