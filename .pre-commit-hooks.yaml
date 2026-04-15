@@ -1,3 +1,4 @@
+# from local repo
 -   id: safety
     name: safety
     entry: python -m safety check

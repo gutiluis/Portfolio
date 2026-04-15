@@ -1,4 +1,4 @@
-# Testing Instructions
+# Testing Instructions ### authentication, not library notes
 
 This document explains how to run tests for the Flask project.
 
@@ -40,6 +40,9 @@ You can specify hooks such as setup and teardown methods and much more to improv
 
 ### Test root path:
 This is a bit of a hidden feature. By defining conftest.py in your root path, you will have pytest recognizing your application modules without specifying PYTHONPATH. In the background, py.test modifies your sys.path by including all submodules which are found from the root path.
+
+
+### testing http basicauthentication extension from flask with pytest
 
 
 ### there can be more than one conftest.py file

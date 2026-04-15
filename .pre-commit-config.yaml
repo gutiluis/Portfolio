@@ -2,9 +2,9 @@
 # pre-commit ignores external hooks
 
 
-# .pre-commit-config.yaml
 repos:
   # 1. Code formatting with Black. checks and reformats python code
+  # no installatin in venv. isolated environement repo: non local
   - repo: https://github.com/psf/black
     rev: 26.3.1   # use the latest stable tag
     hooks:
@@ -28,12 +28,16 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml # for parseable syntax
+      # let the server handle compression gzip, bzip2
+      # prevent giant files from being commited # default=500kb
       - id: check-added-large-files # prevents giant files from being commited
 
-  # 4. Optional: Safety for known insecure Python
+  # 4. Optional: Safety for known insecure Python dependencies under requirements.txt
+  # pre-commit is not making its own isolated environment for the hook
   # simple safety if everybody uses the same python setup and venv
   # Pre-commit just runs the command in your current environment (your venv)
-  # the repo field can be a real repository URL or a special sentinel value like local
+  # the repo field can be a real repository URL which does not need an isolated environment or a special sentinel value like local
+  # development tool should not live under requirements.txt use another file like dev-requirements.txt
   - repo: local # make a .pre-commit-hooks.yaml for safety custom in the venv
     hooks:
       - id: safety

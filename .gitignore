@@ -1,12 +1,18 @@
+# python cache
 __pycache__/
+# pytest cache
+.pytest_cache/
 *.pyc
+# venv
 venv/
+.venv/
 # wrangler files
 .wrangler
 .dev.vars*
 !.dev.vars.example
-.env*
 .env
+.env.local
+.env.*
 !.env.example
 #
 .DS_Store
@@ -18,7 +24,3 @@ supabase/
 .env.local
 # logs
 *.log
-#
-connect_to_postgresql_in_supabase.sh
-#
-test_endpointsREST.js

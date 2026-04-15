@@ -55,6 +55,17 @@ python3 -m safety check -r requirements.txt
 
 ---
 
+
+# Pre-commit Hooks & CI Notes
+
+- `name:` in `.yml` files is just a **label** for a workflow or step.
+- `run:` executes commands in a **shell** (Bash on Ubuntu runners, PowerShell on Windows).
+- Jobs are independent tasks inside a workflow; the job name can be anything.
+- `pre-commit run --all-files` checks all files against hooks in `.pre-commit-config.yaml`.
+- The workflow reads `.yml` and runs each `run:` command in a shell automatically.
+
+
+
 ## footnotes:
 ### configure hooks per language
 ### not every tool provides a pre-commit hook repo. ### see pre-commit mirrors

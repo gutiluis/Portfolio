@@ -1,49 +1,24 @@
 #!/bin/env python
+
+
 """
-Map database models in sqlalchemy for the flask app
+Database sqlalchemy model mapper
 """
 
 import datetime
-from dotenv import load_dotenv
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-import os
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Text, String, Date
 
-# import pdb
+from . import db  # import extension not app
 
-load_dotenv()  # load variables from .env or with pathlib?
-
-app = Flask(__name__)
-# connection string constructor
-# driver is psycopg # python adapter psycopg
-# flask configutarion variable to tell the app which db should connect
-# dialect+driver://username:password@host:port/database # db dialect
-# \/// is a relative file path
-# pdb.set_trace()
-app.config["SQLALCHEMY_DATABASE_URI"] = (
-    f"postgresql+psycopg://{os.getenv('SUPABASE_DB_USER')}:"
-    f"{os.getenv('SUPABASE_DB_PASSWORD')}@"
-    f"{os.getenv('SUPABASE_DB_HOST')}:"
-    f"{os.getenv('SUPABASE_DB_PORT')}/"
-    f"{os.getenv('SUPABASE_DB_NAME')}"
-)
 """
 Flask sqlalchemy event notification system
 that gets layered on top of sqlalachemy
 """
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = (
-    # do not track object modifications. slows down the app
-    # even though not importing models_commited
-    False
-)
-
-db = SQLAlchemy(app)
 
 
 class Project(db.Model):
-    """SQLAlchemy table model"""
+    """SQLAlchemy table model and db schema definition"""
 
     __tablename__ = "projects"
     # primary_key is implicitly nullable=False

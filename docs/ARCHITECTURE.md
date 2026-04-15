@@ -1,4 +1,4 @@
-# Architecture
+# Architecture ### high level design, not libary usage
 
 ## Overview
 
@@ -10,6 +10,13 @@ The architecture is designed to:
 * Keep frontend and backend responsibilities separate
 * Allow database access through secure API endpoints
 * Enable future deployment to cloud infrastructure
+
+Flask-Admin and REST endpoints
+1. Model (Project)
+2. Test model
+3. Admin CRUD (Flask-Admin)
+4. API endpoints
+5. Test API
 
 ---
 

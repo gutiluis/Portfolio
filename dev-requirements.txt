@@ -1,0 +1,6 @@
+safety==3.7.0
+pytest==9.0.2
+pre_commit==4.3.0
+safety-schemas==0.0.16
+nodeenv==1.10.0
+virtualenv==21.2.0
