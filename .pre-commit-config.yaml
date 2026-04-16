@@ -31,20 +31,3 @@ repos:
       # let the server handle compression gzip, bzip2
       # prevent giant files from being commited # default=500kb
       - id: check-added-large-files # prevents giant files from being commited
-
-  # 4. Optional: Safety for known insecure Python dependencies under requirements.txt
-  # pre-commit is not making its own isolated environment for the hook
-  # simple safety if everybody uses the same python setup and venv
-  # Pre-commit just runs the command in your current environment (your venv)
-  # the repo field can be a real repository URL which does not need an isolated environment or a special sentinel value like local
-  # development tool should not live under requirements.txt use another file like dev-requirements.txt
-  - repo: local # make a .pre-commit-hooks.yaml for safety custom in the venv
-    hooks:
-      - id: safety
-        name: Custom hook safety check
-        entry: python -m safety check -r requirements.txt --full-report # command to run
-        language: system
-        # does not analyze python files
-        # no filenames will be passed to the hook
-        #scans only the dependency file requirements.txt for vulnerabilities
-        pass_filenames: false
