@@ -45,10 +45,6 @@ def create_app():
     # do not track object modifications. slows down the app
     # even though not importing models_commited
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    # from flask_basicauth
-    # connect to wsgi flask and then sign in to 127.0.0.1:9000
-    app.config["BASIC_AUTH_USERNAME"] = "adminuser"
-    app.config["BASIC_AUTH_PASSWORD"] = "password"
 
     # Initialize extensions
     db.init_app(app)
