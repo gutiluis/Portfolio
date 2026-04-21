@@ -33,7 +33,13 @@ import uuid
 from app import create_app, db
 import base64
 
+# TODO: function that creates a fresh app every time
+# call factory per test
+# register_blueprint is only inside create_app()?
 
+
+# add an app factory to use multiple requests through pytest
+# app setup (routes, bp, config) must happen before the first request
 # app routes need create_app()
 # db.session interacts and need create_app()
 @pytest.fixture

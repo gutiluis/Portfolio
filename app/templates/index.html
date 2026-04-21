@@ -49,7 +49,11 @@
 
             {% for project in projects %}
                 <div class="a-project">
-                    <h3>Project Title</h3>
+                    <h3>
+                        <a href="{{ url_for('project_detail', project_id=project.id) }}">
+                            {{ project.title }}
+                        </a>
+                    </h3>
                     <a href="{{ project.github_repo }}" class="github-btn">
                         <i class="fab fa-github"></i>
                         View on GitHub

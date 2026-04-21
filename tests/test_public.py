@@ -37,15 +37,6 @@ def test_index(client):
     assert "index.html" in rendered_templates
 
 
-"""
-# or test which template was rendered
-def test_index(client):
-    response = client.get("/")  # request the public root route
-    assert response.status_code == 200
-#    assert b"Hello" in response.data  # or text that appears in index.html
-"""
-
-
 # sending requests with the test client from flask docs
 def test_about_me(client):
     response = client.get("/about")

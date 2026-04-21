@@ -1,7 +1,7 @@
 #!/bin/env python3
 
 """
-blueprint using admin
+blueprint private routes
 basic_auth /admin routes
 """
 
@@ -15,6 +15,7 @@ from flask import (
 )
 from .models import Project
 from datetime import datetime
+from config import Config
 from . import basic_auth, db
 
 # factor an app into a set of blueprints
@@ -36,6 +37,12 @@ def add_project():
     """Render admin new project form html.
     does not require application context
     flask automatically does it when pushing and handling a request"""
+    # context processor
+    auth = request.authorization
+    is_admin = False
+    if auth:
+        if auth.username == Config.BASIC_AUTH_USERNAME:
+            is_admin = True
 
     if request.method == "POST":
         year_and_month = request.form.get("date")
@@ -55,7 +62,8 @@ def add_project():
         db.session.commit()
         # main.index is bp does not exist in bp
         return redirect(url_for("index"))
-    return render_template("projectform.html")
+
+    return render_template("projectform.html", is_admin=is_admin)
 
 
 @bp.route("/admin/projects/<int:project_id>/edit", methods=["GET", "POST"])
