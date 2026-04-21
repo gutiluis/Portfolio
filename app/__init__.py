@@ -1,6 +1,8 @@
 #!/bin/env python3
 
 """
+environment variables
+public admin CRUD panel
 public routes
 """
 
@@ -12,18 +14,22 @@ from flask_admin.contrib.sqla import ModelView
 from flask_basicauth import BasicAuth
 from dotenv import load_dotenv
 
+# import pdb
+
 load_dotenv()
 
 
 # Initialize extensions (no app yet)
 db = SQLAlchemy()
 basic_auth = BasicAuth()  # from flask-admin extension
-admin = Admin(name="microblog")  # app will be bound in create_app()
 
 
 def create_app():
     # __call__ lets you make an instance behave like a function
     # app is WSGI applicatin
+    # app is a control panel object with app.url_map, app.json etc...
+    # app is an object that has attributes and
+    # app has helper interfaces atached to the flask application object
     app = Flask(__name__)  # Flask.__call__() 2 required postitional arguments
     import os
 
@@ -45,10 +51,11 @@ def create_app():
     # do not track object modifications. slows down the app
     # even though not importing models_commited
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    # from flask_basicauth
-    # connect to wsgi flask and then sign in to 127.0.0.1:9000
-    app.config["BASIC_AUTH_USERNAME"] = "adminuser"
-    app.config["BASIC_AUTH_PASSWORD"] = "password"
+
+    #    pdb.set_trace()
+    # the correct username and password that grants access for the client
+    # access the procected resource
+    app.config.from_object("config.Config")
 
     # Initialize extensions
     db.init_app(app)
@@ -56,8 +63,19 @@ def create_app():
 
     from .models import Project
 
+    # inside is not global and can be reused
+    # already register views/blueprints on the app if admin is global
+    admin = Admin(name="microblog")  # app will be bound in create_app()
+
+    # Project is the clas # CRUD view for the model
     # from flask-admin extension for admin panel
-    admin.add_view(ModelView(Project, db.session))
+    admin.add_view(
+        ModelView(Project, db.session)
+    )  # first request handled triggers error
+    # does not have basic authentication and is public
+    # activate admin panel. second request
+    # already used admin blueprint method
+    admin.init_app(app)  # bound admin to the app
 
     @app.route("/")  # REST endpoint
     def index():
@@ -85,6 +103,8 @@ def create_app():
 
     from .routes import bp
 
+    # what is register_blueprint?
+    # >>> app.url_map # check rules registered on the app
     app.register_blueprint(bp)
 
     with app.app_context():
