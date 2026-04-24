@@ -1,6 +1,8 @@
-# Architecture ### high level design, not libary usage
 
-## Overview
+
+
+# Architecture ### high level design, not libary usage
+### Overview
 
 This project is a web application for managing portfolio projects.
 It follows a simple **client → API → database architecture** where the frontend interacts with backend endpoints that store and retrieve data from a database.
@@ -20,18 +22,25 @@ Flask-Admin and REST endpoints
 
 ---
 
-# System Architecture; TODO
+### System Architecture:
 
-```
+### Backend
+- RESTful API Development: Designing the routes and endpoints that allow the frontend to communicate with the backend.
 
+- Server-Side Rendering (SSR): Using Jinja2 to dynamically generate HTML, which is a key skill for SEO-friendly web applications.
 
-
-```
-
+- Authentication & Session Management: If your app has a login, you’ve mastered handling user states and secure cookies.
 
 ---
 
-# Project Structure; TODO
+### Database Management:
+- Object-Relational Mapping (ORM): The ability to interact with a database using Python objects rather than raw SQL.
+
+- Database Migrations: Handling changes to your data structure over time (likely using tools like Flask-Migrate).
+
+---
+
+### Project Structure; TODO
 
 ```
 ```
@@ -52,21 +61,14 @@ Continuous integration pipelines using GitHub Actions.
 
 ---
 
-# Components
+## Components
 
-## Frontend
+### Frontend
 
 The frontend consists of:
 
 * HTML templates
 * CSS styling
-* JavaScript for API calls
-
-Responsibilities:
-
-* Display portfolio projects
-* Submit forms
-* Fetch data from API endpoints
 
 ---
 
@@ -109,7 +111,7 @@ Supabase provides:
 
 ---
 
-# Data Flow
+### Data Flow
 
 Example workflow when a user creates a project:
 
@@ -121,36 +123,7 @@ Example workflow when a user creates a project:
 
 ---
 
-# Technology Stack
-
-Backend
-
-* Python
-* Flask
-* psycopg / PostgreSQL driver
-
-Database
-
-* Supabase (PostgreSQL)
-
-Frontend
-
-* HTML
-* CSS
-* JavaScript
-
-Testing
-
-* pytest
-
-Infrastructure
-
-* Cloudflare (DNS / CDN)
-* GitHub (version control)
-
----
-
-# Deployment
+### Deployment
 
 Local development:
 
@@ -174,7 +147,7 @@ Cloudflare
 
 ---
 
-# Design Decisions
+### Design Decisions
 
 ### Flask for Backend
 
@@ -189,13 +162,6 @@ Supabase provides a managed PostgreSQL database with built-in REST APIs and Row 
 Pytest provides a simple framework for unit and integration testing of Flask endpoints.
 
 ---
-
-# Future Improvements
-
-* Replace Flask server with serverless functions
-* Deploy frontend using Cloudflare Pages
-* Add authentication with Supabase Auth
-* Expand automated test coverage
 
 ### References:
 [SQLAlchemy connection pooling docs](https://docs.sqlalchemy.org/en/20/core/pooling.html)

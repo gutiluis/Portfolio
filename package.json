@@ -1,13 +1,13 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "webpage with db in cloudflare pages",
+  "description": "webpage with cloudflare pages",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "tech-ca-labs",
+  "author": "technobool",
   "license": "MIT",
   "devDependencies": {
     "supabase": "^2.78.1",
