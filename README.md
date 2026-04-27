@@ -1,4 +1,4 @@
-# Portfolio with SQLAlchemy, HTML, CSS, Cloudflare, Supabase, PostgreSQL, Oracle, Flask, Python
+# Portfolio
 [INFO] Project under construction.
 
 ---
