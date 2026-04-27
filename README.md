@@ -7,7 +7,7 @@
 
 ---
 
-## How it works for now and may change:
+## How to run in bash:
 ``` bash
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
