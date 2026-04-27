@@ -81,3 +81,8 @@ The inclusion of Cloudflare moves this from a "local script" to a "production-re
 - Deployment Pipelines: The knowledge required to take code from a local environment to a live URL.
 
 ---
+
+---
+![License](https://img.shields.io/github/license/gutiluis/Scripts?style=flat-square&color=blue)
+### License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
