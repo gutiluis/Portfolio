@@ -2,6 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Under%20Development-orange?style=flat-square)
 
+
 🚧 ***Project under development*** 🚧
 
 ---
@@ -13,7 +14,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ---
 
-### Tech Stack:
+### Tech Stack
 - Backend: Python, Flask, SQLAlchemy
 - Database: PostgreSQL, Supabase
 - Frontend: Jinja2, HTML, CSS
@@ -21,7 +22,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ---
 
-### Features:
+### Features
 - RESTful API with structured routing
 - Database abstraction using SQLAlchemy ORM
 - CRUD operations for project management
@@ -59,6 +60,11 @@ python3 run.py
 
 ---
 
+### Task list
+- [ ] Write docs
+
+---
+
 ### Architecture
 - Modular separation of routes, models, and services
 - ORM layer abstracts raw SQL queries
@@ -66,8 +72,8 @@ python3 run.py
 
 ---
 
-### Notes
-Project features incomplete or may change[^1].
+> [!IMPORTANT]
+> Incomplete features behaviour might change[^1].
 
 ---
 
@@ -77,5 +83,5 @@ This project is licensed under the **MIT License**[^2].
 
 ---
 
-[^1]: Development phase under revision.
+[^1]: Currently under development revision.
 [^2]: See the [LICENSE](/gutiluis/Portfolio/blob/main/LICENSE) file for details.
