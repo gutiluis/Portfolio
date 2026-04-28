@@ -1,6 +1,7 @@
 # Portfolio
 
 ![Status](https://img.shields.io/badge/Status-Under%20Development-orange?style=flat-square)
+
 🚧 ***Project under construction*** 🚧
 
 ---
@@ -8,6 +9,7 @@
 ### Overview
 
 Flask based backend service for managing user portfolios and admin dashboards. 
+
 Designed with a modular architecture, RESTful APIs, and PostgreSQL for persistent storage.
 
 ---
