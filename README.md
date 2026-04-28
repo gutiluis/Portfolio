@@ -17,7 +17,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 ### Tech Stack:
 
 - Backend: Python, Flask
-- Database: PostgresSQL, SQLAlchemy, Psycopg
+- Database: PostgreSQL, SQLAlchemy, Psycopg
 - Frontend: Jinja2, HTML, CSS
 - Infrastructure: Cloudflare, Supabase
 
@@ -33,7 +33,8 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ---
 
-### How to run in bash:
+### Getting Started
+
 ``` bash
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
@@ -46,10 +47,13 @@ python3 run.py
 ---
 
 ### Example API
-
+```http
 GET /api/projects
 
 POST /api/projects
+
+DELETE /api/projects/<id>
+```
 
 ---
 
