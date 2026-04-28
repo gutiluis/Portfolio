@@ -52,8 +52,8 @@ python3 run.py
 **GET** `/api/projects/<id>`  
 **Description:** Fetches the details of an existing project.
 
-#### Create Project by ID
-**POST** `/api/projects/<id>`  
+#### Create Project
+**POST** `/api/projects`  
 **Description:** Creates a new project using the specified unique identifier.
 
 #### Delete Project by ID
