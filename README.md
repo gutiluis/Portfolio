@@ -14,10 +14,10 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 ---
 
 ### Tech Stack:
-- Backend: Python, Flask
-- Database: PostgreSQL, SQLAlchemy, Psycopg
+- Backend: Python, Flask, SQLAlchemy
+- Database: PostgreSQL, Supabase
 - Frontend: Jinja2, HTML, CSS
-- Infrastructure: Cloudflare, Supabase
+- CDN: Cloudflare
 
 ---
 
@@ -38,6 +38,7 @@ cd Portfolio
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env
 python3 run.py
 ```
 
@@ -66,10 +67,15 @@ python3 run.py
 ---
 
 ### Notes
-Project features incomplete or may change.
+Project features incomplete or may change[^1].
 
 ---
 
 ![License](https://img.shields.io/github/license/gutiluis/Scripts?style=flat-square&color=blue)
 ### License
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**[^2].
+
+---
+
+[^1]: Development phase under revision.
+[^2]: See the [LICENSE](LICENSE) file for details.
