@@ -1,6 +1,7 @@
 # Portfolio
 
-🚧 Project under construction 🚧
+![Status](https://img.shields.io/badge/Status-Under%20Development-orange?style=flat-square)
+🚧 ***Project under construction*** 🚧
 
 ---
 
