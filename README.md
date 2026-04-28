@@ -78,4 +78,4 @@ This project is licensed under the **MIT License**[^2].
 ---
 
 [^1]: Development phase under revision.
-[^2]: See the [LICENSE](LICENSE) file for details.
+[^2]: See the [LICENSE](./LICENSE) file for details.
