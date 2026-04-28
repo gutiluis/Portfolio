@@ -7,7 +7,6 @@
 ---
 
 ### Overview
-
 A Flask-based backend service that allows users to create, manage, and display portfolio projects, with an admin dashboard for content control.
 
 Designed with a modular architecture, RESTful APIs, and PostgreSQL for persistent storage.
@@ -15,7 +14,6 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 ---
 
 ### Tech Stack:
-
 - Backend: Python, Flask
 - Database: PostgreSQL, SQLAlchemy, Psycopg
 - Frontend: Jinja2, HTML, CSS
@@ -34,7 +32,6 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 ---
 
 ### Getting Started
-
 ```bash
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
@@ -47,23 +44,21 @@ python3 run.py
 ---
 
 ### Example API Endpoints
-
 #### Retrieve Project by ID
-**GET** `/api/projects/<id>`  
+**GET** `/api/projects/<id>`
 **Description:** Fetch a specific project.
 
 #### Create Project
-**POST** `/api/projects`  
+**POST** `/api/projects`
 **Description:** Create a new project.
 
 #### Delete Project by ID
-**DELETE** `/api/projects/<id>`  
+**DELETE** `/api/projects/<id>`
 **Description:** Remove a project by its ID.
 
 ---
 
 ### Architecture
-
 - Modular separation of routes, models, and services
 - ORM layer abstracts raw SQL queries
 - Template inheritance using Jinja2 (DRY)
