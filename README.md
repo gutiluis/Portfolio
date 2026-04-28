@@ -88,7 +88,7 @@ python3 run.py
 
 - Infrastructure: Hosted on an Oracle Cloud VM using a production-ready WSGI server.
 
-- System Design: For a deep dive into the service layers, data flow, and component interaction, see the Architecture Overview.
+- System Design: For a deep dive into the service layers, data flow, and component interaction, see the [Architecture Overview](/docs/ARCHITECTURE.md).
 
 - Database: PostgreSQL/Supabase for persistent storage.
 
