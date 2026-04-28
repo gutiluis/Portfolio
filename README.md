@@ -48,14 +48,17 @@ python3 run.py
 ### Example API Endpoints
 #### Retrieve Project by ID
 **GET** `/api/projects/<id>`
+
 **Description:** Fetch a specific project.
 
 #### Create Project
 **POST** `/api/projects`
+
 **Description:** Create a new project.
 
 #### Delete Project by ID
 **DELETE** `/api/projects/<id>`
+
 **Description:** Remove a project by its ID.
 
 ---
