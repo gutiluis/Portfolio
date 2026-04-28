@@ -35,7 +35,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ### Getting Started
 
-``` bash
+```
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
 python3 -m venv venv
@@ -54,7 +54,6 @@ POST /api/projects
 
 DELETE /api/projects/<id>
 ```
-
 ---
 
 ### Architecture
