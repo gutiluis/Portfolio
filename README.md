@@ -35,7 +35,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ### Getting Started
 
-```
+``` bash
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
 python3 -m venv venv
@@ -46,14 +46,20 @@ python3 run.py
 
 ---
 
-### Example API
-```http
-GET /api/projects
+### Example API Endpoints
 
-POST /api/projects
+#### Retrieve Project by ID
+`GET /api/projects/<id>`
+**Description:** Fetches the details of an existing project.
 
-DELETE /api/projects/<id>
-```
+#### Create Project by ID
+`POST /api/projects/<id>`
+**Description:** Creates a new project using the specified unique identifier.
+
+#### Delete Project by ID
+`DELETE /api/projects/<id>`
+**Description:** Removes the project associated with the given ID.
+
 ---
 
 ### Architecture
