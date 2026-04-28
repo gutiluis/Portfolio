@@ -8,7 +8,7 @@
 
 ### Overview
 
-Flask based backend service for managing user portfolios and admin dashboards. 
+A Flask-based backend service that allows users to create, manage, and display portfolio projects, with an admin dashboard for content control.
 
 Designed with a modular architecture, RESTful APIs, and PostgreSQL for persistent storage.
 
@@ -24,13 +24,12 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 ---
 
 ### Features:
-- RESTful API backend built with Flask
-- ORM database management using SQLAlchemy
-- PostgreSQL database hosted on Supabase
-- Dynamic HTML templates using Jinja2
-- Responsive UI built with HTML and CSS
+- RESTful API with structured routing
+- Database abstraction using SQLAlchemy ORM
 - CRUD operations for project management
-- Secure environment configuration
+- Server-side rendering with Jinja2 templates
+- Responsive UI using reusable layouts
+- Environment-based configuration for security
 
 ---
 
@@ -43,6 +42,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 python3 run.py
 ```
+
+---
+
+### Example API
+GET /api/projects
+POST /api/projects
+
+---
+
+### Architecture
+
+- Modular separation of routes, models, and services
+- ORM layer abstracts raw SQL queries
+- Template inheritance using Jinja2 (DRY)
+
 ---
 
 ### Notes
