@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Under%20Development-orange?style=flat-square)
 
-🚧 ***Project under construction*** 🚧
+🚧 ***Project under development*** 🚧
 
 ---
 
@@ -62,8 +62,7 @@ POST /api/projects
 ---
 
 ### Notes
-Project is not stable. 
-Features incomplete or may change.
+Project features incomplete or may change.
 
 ---
 
