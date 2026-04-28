@@ -71,7 +71,7 @@ Project features incomplete or may change[^1].
 
 ---
 
-![License](https://img.shields.io/github/license/gutiluis/Scripts?style=flat-square&color=blue)
+![License](https://img.shields.io/github/license/gutiluis/Portfolio?style=flat-square&color=blue)
 ### License
 This project is licensed under the **MIT License**[^2].
 
