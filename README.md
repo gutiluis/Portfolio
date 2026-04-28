@@ -14,6 +14,16 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ---
 
+### Table of Contents
+* [Tech Stack](#tech-stack)
+* [Features](#features)
+* [Getting Started](#setup)
+* [API Examples](#api)
+* [Task List](#to-do-list)
+* [Architecture](#arch)
+
+---
+<a name="tech-stack"></a>
 ### Tech Stack
 - Backend: Python, Flask, SQLAlchemy
 - Database: PostgreSQL, Supabase
@@ -21,7 +31,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 - CDN: Cloudflare
 
 ---
-
+<a name="features"></a>
 ### Features
 - RESTful API with structured routing
 - Database abstraction using SQLAlchemy ORM
@@ -31,7 +41,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 - Environment-based configuration for security
 
 ---
-
+<a name="setup"></a>
 ### Getting Started
 ```bash
 git clone https://github.com/gutiluis/Portfolio.git
@@ -44,7 +54,7 @@ python3 run.py
 ```
 
 ---
-
+<a name="api"></a>
 ### Example API Endpoints
 #### Retrieve Project by ID
 **GET** `/api/projects/<id>`
@@ -62,8 +72,8 @@ python3 run.py
 **Description:** Remove a project by its ID.
 
 ---
-
-### Task list
+<a name="to-do-list"></a>
+### Task List
 - [x] Flask local deployment
 - [ ] Transition from werkzeug to Gunicorn/Nginx
 - [ ] Oracle VM instance deployment
@@ -72,7 +82,7 @@ python3 run.py
 - [ ] Pentesting
 
 ---
-
+<a name="arch"></a>
 ### Architecture
 - The project follows a modular design pattern to ensure scalability and maintainability.
 
