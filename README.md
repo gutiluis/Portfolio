@@ -43,8 +43,8 @@ python3 run.py
 ---
 
 ### Notes
-This project is not stable. 
-Features incomlete or may change.
+Project is not stable. 
+Features incomplete or may change.
 
 ---
 
