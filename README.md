@@ -61,14 +61,23 @@ python3 run.py
 ---
 
 ### Task list
+- [x] Flask local deployment
+- [ ] Transition from werkzeug to Gunicorn/Nginx
+- [ ] Oracle VM instance deployment
 - [ ] Write docs
+- [ ] Acquire domain
+- [ ] Pentesting
 
 ---
 
 ### Architecture
-- Modular separation of routes, models, and services
-- ORM layer abstracts raw SQL queries
-- Template inheritance using Jinja2 (DRY)
+- The project follows a modular design pattern to ensure scalability and maintainability.
+
+- Infrastructure: Hosted on an Oracle Cloud VM using a production-ready WSGI server.
+
+- System Design: For a deep dive into the service layers, data flow, and component interaction, see the Architecture Overview.
+
+- Database: PostgreSQL/Supabase for persistent storage.
 
 ---
 
@@ -83,5 +92,5 @@ This project is licensed under the **MIT License**[^2].
 
 ---
 
-[^1]: Currently under development revision.
+[^1]: Currently building.
 [^2]: See the [LICENSE](/gutiluis/Portfolio/blob/main/LICENSE) file for details.
