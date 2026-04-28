@@ -49,15 +49,15 @@ python3 run.py
 ### Example API Endpoints
 
 #### Retrieve Project by ID
-`GET /api/projects/<id>`
+**GET** `/api/projects/<id>`  
 **Description:** Fetches the details of an existing project.
 
 #### Create Project by ID
-`POST /api/projects/<id>`
+**POST** `/api/projects/<id>`  
 **Description:** Creates a new project using the specified unique identifier.
 
 #### Delete Project by ID
-`DELETE /api/projects/<id>`
+**DELETE** `/api/projects/<id>`  
 **Description:** Removes the project associated with the given ID.
 
 ---
