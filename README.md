@@ -1,7 +1,6 @@
 # Portfolio
 
 🚧 Project under construction 🚧
-Features incomplete or may change
 
 ---
 
@@ -18,7 +17,6 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 - Database: PostgresSQL, SQLAlchemy, Psycopg
 - Frontend: Jinja2, HTML, CSS
 - Infrastructure: Cloudflare, Supabase
-- Node.js
 
 ---
 
@@ -45,8 +43,8 @@ python3 run.py
 ---
 
 ### Notes
-This project is not stable. Expect changes.
-Some features may not work or may be incomplete.
+This project is not stable. 
+Features incomlete or may change.
 
 ---
 
