@@ -46,7 +46,9 @@ python3 run.py
 ---
 
 ### Example API
+
 GET /api/projects
+
 POST /api/projects
 
 ---
