@@ -54,7 +54,7 @@ python3 run.py
 
 #### Create Project
 **POST** `/api/projects`  
-**Description:** Creates a new project using the specified unique identifier.
+**Description:** Creates a new project.
 
 #### Delete Project by ID
 **DELETE** `/api/projects/<id>`  
