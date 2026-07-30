@@ -19,7 +19,6 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 * [Features](#features)
 * [Getting Started](#setup)
 * [API Examples](#api)
-* [Task List](#to-do-list)
 * [Architecture](#arch)
 
 ---
@@ -70,16 +69,6 @@ python3 run.py
 **DELETE** `/api/projects/<id>`
 
 **Description:** Remove a project by its ID.
-
----
-<a name="to-do-list"></a>
-### Task List
-- [x] Flask local deployment
-- [ ] Transition from werkzeug to Gunicorn/Nginx
-- [ ] Oracle VM instance deployment
-- [ ] Write docs
-- [ ] Acquire domain
-- [ ] Pentesting
 
 ---
 <a name="arch"></a>
