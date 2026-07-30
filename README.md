@@ -42,7 +42,7 @@ Designed with a modular architecture, RESTful APIs, and PostgreSQL for persisten
 
 ---
 <a name="setup"></a>
-### Getting Started
+### How it works
 ```bash
 git clone https://github.com/gutiluis/Portfolio.git
 cd Portfolio
@@ -94,11 +94,6 @@ python3 run.py
 
 ---
 
-> [!IMPORTANT]
-> Incomplete features behaviour might change[^1].
-
----
-
 ## Contributing
 
 If you are interested in reporting/fixing issues and contributing directly to the code base, please see [CONTRIBUTING.md](https://github.com/gutiluis/.github/blob/main/CONTRIBUTING.md) for more information on what we're looking for and how to get started.
@@ -129,6 +124,11 @@ Info on reporting bugs, getting help, finding third-party tools and sample apps,
 * **Discord:** [Community channel](https://discord.gg/5xdAFuadP)
 * **Slack Workspace:** [technobool.slack.com](https://technobool.slack.com)
 * **GitHub Discussions:** [Open a discussion](https://github.com/gutiluis/Portfolio/discussions)
+
+---
+
+> [!IMPORTANT]
+> Incomplete features behaviour might change[^1].
 
 ---
 
